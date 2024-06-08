@@ -1,9 +1,15 @@
-const AdminIndex = () => {
+import useDocumentTitle from "../../hooks/useDocumentTitle";
+import PageProps from "../../types/pageProps";
+
+const AdminIndex = ({ title }: PageProps) => {
+  const documentTitle = useDocumentTitle;
+  documentTitle(title);
+
   return (
-    <main>
+    <>
       <h1>Admin Index</h1>
       <p>Excuse me! This is a restricted area!</p>
-    </main>
+    </>
   );
 };
 

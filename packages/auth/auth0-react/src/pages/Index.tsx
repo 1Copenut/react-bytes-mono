@@ -1,9 +1,15 @@
-const Index = () => {
+import PageProps from "../types/pageProps";
+import useDocumentTitle from "../hooks/useDocumentTitle";
+
+const Index = ({ title }: PageProps) => {
+  const documentTitle = useDocumentTitle;
+  documentTitle(title);
+
   return (
-    <main>
+    <>
       <h1>Vite + React</h1>
       <p>This will be where I put more interesting content. Soon.</p>
-    </main>
+    </>
   );
 };
 

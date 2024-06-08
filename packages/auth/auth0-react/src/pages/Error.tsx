@@ -1,12 +1,18 @@
 import { useRouteError } from "react-router-dom";
 
+import useDocumentTitle from "../hooks/useDocumentTitle";
+import PageProps from "../types/pageProps";
+
 // See https://stackoverflow.com/a/75948984 for error typing
-const Error = () => {
+const Error = ({ title }: PageProps) => {
+  const documentTitle = useDocumentTitle;
+  documentTitle(title);
+
   const error = useRouteError();
   console.error(error);
 
   return (
-    <div id="error-page">
+    <>
       <h1>Oops!</h1>
       <p>Sorry, an unexpected error has occurred.</p>
       <p>
@@ -15,7 +21,7 @@ const Error = () => {
             (error as { statusText?: string })?.statusText}
         </i>
       </p>
-    </div>
+    </>
   );
 };
 

@@ -11,19 +11,19 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <Error />,
+    errorElement: <Error title="404: Page not found" />,
     children: [
       {
         path: "/",
-        element: <Index />,
+        element: <Index title="App home" />,
       },
       {
         path: "/about",
-        element: <About />,
+        element: <About title="About my app" />,
       },
       {
         path: "/admin",
-        element: <AdminIndex />,
+        element: <AdminIndex title="Admin area" />,
       },
     ],
   },
