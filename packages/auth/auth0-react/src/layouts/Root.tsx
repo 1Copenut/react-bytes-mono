@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-import Header from "../components/header.global";
+import Header from "../components/Header";
 import { Auth0ProviderWithNavigate } from "../providers/auth0ProviderWithNavigate";
 
 const Root = () => {

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-// See https://stackoverflow.com/a/73290933
+// TODO: Add to README See https://stackoverflow.com/a/73290933
 export const useDocumentTitle = (title: string) => {
   useEffect(() => {
     document.title = title;
