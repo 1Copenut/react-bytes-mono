@@ -11,6 +11,7 @@ import About from "../pages/About";
 import Error from "../pages/errors/Error";
 import NotFound from "../pages/errors/NotFound";
 import AdminIndex from "../pages/admin/AdminIndex";
+import AuthenticationGuard from "../components/higherOrder/AuthenticationGuard";
 
 const errorComponent = <Error title="500: Server error" />;
 
@@ -29,7 +30,9 @@ export const router = createBrowserRouter(
       />
       <Route
         path="/admin"
-        element={<AdminIndex title="Admin area" />}
+        element={
+          <AuthenticationGuard component={AdminIndex} title="Admin area" />
+        }
         errorElement={errorComponent}
       />
       <Route path="*" element={<NotFound title="404: Page not found" />} />
