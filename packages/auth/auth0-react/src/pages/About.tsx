@@ -1,5 +1,6 @@
-import PageProps from "../types/PageProps";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
+
+import PageProps from "../types/PageProps";
 
 const About = ({ title }: PageProps) => {
   const documentTitle = useDocumentTitle;

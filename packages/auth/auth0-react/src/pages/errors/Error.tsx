@@ -1,7 +1,8 @@
 import { useRouteError } from "react-router-dom";
 
-import PageProps from "../../types/PageProps";
 import { useDocumentTitle } from "../../hooks/useDocumentTitle";
+
+import PageProps from "../../types/PageProps";
 
 // TODO: Add to README See https://stackoverflow.com/a/75948984 for error typing
 const Error = ({ title }: PageProps) => {
