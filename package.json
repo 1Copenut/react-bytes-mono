@@ -8,11 +8,12 @@
   "workspaces": [
     "packages/**/*"
   ],
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@auth0/auth0-react": "^2.2.4"
-  }
+  "keywords": [
+    "react",
+    "auth0",
+    "express"
+  ],
+  "author": "Trevor Pierce",
+  "license": "MIT",
+  "description": ""
 }
