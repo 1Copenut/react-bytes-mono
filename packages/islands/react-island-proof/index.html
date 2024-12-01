@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Hello Vite! (wait is it pronounced "veet" or "vight"...)</h1>
+  <div id="root"></div>
+  <script type="module">
+    import PronounceVite from './components/PronounceVite.jsx';
+    import React, { createElement } from 'react';
+    import ReactDOM from 'react-dom';
+
+    const componentRoot = document.getElementById('root');
+
+    ReactDOM.render(createElement(PronounceVite), componentRoot);
+  </script>
+</body>
+
+</html>
