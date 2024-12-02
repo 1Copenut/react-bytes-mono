@@ -11,14 +11,14 @@
 <body>
   <h1>Hello Vite! (wait is it pronounced "veet" or "vight"...)</h1>
   <div id="root"></div>
+  <script type="module" src="reactIslands.jsx"></script>
   <script type="module">
-    import PronounceVite from './components/PronounceVite.jsx';
-    import React, { createElement } from 'react';
-    import ReactDOM from 'react-dom';
+    document.addEventListener("DOMContentLoaded", (e) => {
+      console.log("DOM fully loaded and parsed");
+      console.log(window.ReactIslands);
 
-    const componentRoot = document.getElementById('root');
-
-    ReactDOM.render(createElement(PronounceVite), componentRoot);
+      window.ReactIslands.pronounceVite(document.getElementById('root'));
+    });
   </script>
 </body>
 
